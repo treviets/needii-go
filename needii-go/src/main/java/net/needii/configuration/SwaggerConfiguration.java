@@ -27,7 +27,7 @@ public class SwaggerConfiguration {
                         "RESTful API Documentation",
                         "1.0",
                         null,
-                        new Contact("Vivid Amazilla Napperons Limited", null, null),
+                        new Contact("Trevietsoft.com", null, null),
                         null,
                         null
                 ));

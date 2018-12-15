@@ -3,7 +3,7 @@
   <display-name>CIS NFC Platform 1.0</display-name>
   <description>CIS NFC Platform</description>
   <resource-ref>
-    <res-ref-name>jdbc/needii</res-ref-name>
+    <res-ref-name>jdbc/neediigo</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
