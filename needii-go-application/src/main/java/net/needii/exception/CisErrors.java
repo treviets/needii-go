@@ -1,7 +1,7 @@
 package net.needii.exception;
 
 /**
- * Created by Vincent 01/12/2017
+ * Created by Vincent
  */
 public enum CisErrors {
 

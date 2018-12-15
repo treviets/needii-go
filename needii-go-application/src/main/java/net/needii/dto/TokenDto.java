@@ -8,7 +8,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public class TokenDto {

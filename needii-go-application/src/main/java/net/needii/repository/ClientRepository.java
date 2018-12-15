@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import net.needii.jpa.entity.Client;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public interface ClientRepository extends JpaRepository<Client, Integer>{

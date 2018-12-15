@@ -6,7 +6,7 @@ package net.needii.jpa.entity;
 import java.util.List;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public class TokenModel {

@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import net.needii.jpa.entity.CustomerBalanceHistory;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public interface CustomerBalanceHistoryRepository extends JpaRepository<CustomerBalanceHistory, Long>{

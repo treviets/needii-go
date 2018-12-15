@@ -14,7 +14,7 @@ import util.validate.PhoneValidatorConstraint;
 
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @MappedSuperclass

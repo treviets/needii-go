@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import net.needii.jpa.entity.Ward;
 
 /**
- * @author vincent
+ * @author Vincent
  *
  */
 public interface WardRepository extends JpaRepository<Ward, Integer>{

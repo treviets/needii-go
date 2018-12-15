@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 
 /**
- * The persistent class for the admins database table.
+ * The persistent class for the cities table.
  * 
  */
 @Entity

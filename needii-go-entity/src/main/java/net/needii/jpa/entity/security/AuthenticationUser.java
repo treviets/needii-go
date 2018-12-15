@@ -6,7 +6,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 /**
- * Created by Vincent on 25/11/2017.
+ * Created by Vincent
  */
 public class AuthenticationUser extends User{
 

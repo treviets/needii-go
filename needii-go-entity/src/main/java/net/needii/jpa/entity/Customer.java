@@ -13,7 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @Entity
@@ -65,6 +65,128 @@ public class Customer extends BaseUser {
 	private String googleUID;
 
 	private boolean status;
+
+	public int getAuthType() {
+		return authType;
+	}
+
+	public void setAuthType(int authType) {
+		this.authType = authType;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public String getFavoriteProductIds() {
+		return favoriteProductIds;
+	}
+
+	public void setFavoriteProductIds(String favoriteProductIds) {
+		this.favoriteProductIds = favoriteProductIds;
+	}
+
+	public float getNeediiCash() {
+		return neediiCash;
+	}
+
+	public void setNeediiCash(float neediiCash) {
+		this.neediiCash = neediiCash;
+	}
+
+	public int getGender() {
+		return gender;
+	}
+
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
+	public Date getLastLoginAt() {
+		return lastLoginAt;
+	}
+
+	public void setLastLoginAt(Date lastLoginAt) {
+		this.lastLoginAt = lastLoginAt;
+	}
+
+	public Date getReferenceAt() {
+		return referenceAt;
+	}
+
+	public void setReferenceAt(Date referenceAt) {
+		this.referenceAt = referenceAt;
+	}
+
+	public String getVerifyCode() {
+		return verifyCode;
+	}
+
+	public void setVerifyCode(String verifyCode) {
+		this.verifyCode = verifyCode;
+	}
+
+	public boolean isAuthenticated() {
+		return isAuthenticated;
+	}
+
+	public void setAuthenticated(boolean isAuthenticated) {
+		this.isAuthenticated = isAuthenticated;
+	}
+
+	public String getReferenceCode() {
+		return referenceCode;
+	}
+
+	public void setReferenceCode(String referenceCode) {
+		this.referenceCode = referenceCode;
+	}
+
+	public long getReferenceBy() {
+		return referenceBy;
+	}
+
+	public void setReferenceBy(long referenceBy) {
+		this.referenceBy = referenceBy;
+	}
+
+	public String getFacebookUID() {
+		return facebookUID;
+	}
+
+	public void setFacebookUID(String facebookUID) {
+		this.facebookUID = facebookUID;
+	}
+
+	public String getGoogleUID() {
+		return googleUID;
+	}
+
+	public void setGoogleUID(String googleUID) {
+		this.googleUID = googleUID;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	
+	
 
 	
 }

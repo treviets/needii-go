@@ -1,7 +1,7 @@
 package net.needii.dto;
 
 /**
- * @author longnguyen
+ * @author Vincent
  *
  */
 public class BaseDto {

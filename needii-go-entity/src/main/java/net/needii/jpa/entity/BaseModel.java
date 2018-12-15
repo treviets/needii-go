@@ -19,7 +19,7 @@ import util.Utils;
 
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @MappedSuperclass

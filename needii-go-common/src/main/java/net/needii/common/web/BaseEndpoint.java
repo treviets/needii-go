@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 /**
- * @author vincent
+ * @author Vincent
  */
 public class BaseEndpoint {
 	protected HttpServletRequest request;

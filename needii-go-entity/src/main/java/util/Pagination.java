@@ -28,7 +28,7 @@ import java.io.Serializable;
 /**
  * A pagination object to be used to describe pagination (offset, limit) which can be used in queries.
  *
- * @author <a href="mailto:nscavell@redhat.com">Nick Scavelli</a>
+ * @author Vincent
  */
 public class Pagination implements Serializable {
     /**

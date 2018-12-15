@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import net.needii.jpa.entity.District;
 
 /**
- * @author vincent
+ * @author Vincent
  *
  */
 public interface DistrictRepository extends JpaRepository<District, Integer>{

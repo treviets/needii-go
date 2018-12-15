@@ -8,7 +8,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @Entity

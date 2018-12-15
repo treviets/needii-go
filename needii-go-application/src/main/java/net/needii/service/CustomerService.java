@@ -7,7 +7,7 @@ import net.needii.dto.CustomerDto;
 
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public interface CustomerService {

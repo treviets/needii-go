@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public class CustomerDto {

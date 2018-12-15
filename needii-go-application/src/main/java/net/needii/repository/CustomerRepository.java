@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import net.needii.jpa.entity.Customer;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public interface CustomerRepository extends JpaRepository<Customer, Long>{

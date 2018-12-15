@@ -7,7 +7,7 @@ import org.springframework.jndi.JndiLocatorDelegate;
 import javax.naming.NamingException;
 
 /**
- * Created by Vincent 01/12/2017
+ * Created by Vincent
  */
 public class SpringProfilesActiveApplicationContextInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
     private static final String[] DEFAULT_PROFILES_ACTIVE = {"default", "dev", "stage", "prod", "timers", "swagger"};
@@ -17,7 +17,7 @@ public class SpringProfilesActiveApplicationContextInitializer implements Applic
         String[] profilesActive;
         JndiLocatorDelegate jndiLocatorDelegate = JndiLocatorDelegate.createDefaultResourceRefLocator();
         try {
-            profilesActive = jndiLocatorDelegate.lookup("java:/comp/env/cd/springProfilesActive", String.class).split(",");
+            profilesActive = jndiLocatorDelegate.lookup("java:/comp/env/neediigo/springProfilesActive", String.class).split(",");
         } catch (NamingException e) {
             profilesActive = DEFAULT_PROFILES_ACTIVE;
         }

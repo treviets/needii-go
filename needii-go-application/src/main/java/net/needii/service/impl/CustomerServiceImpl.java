@@ -14,7 +14,7 @@ import net.needii.repository.CustomerRepository;
 import net.needii.service.CustomerService;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @Transactional

@@ -4,7 +4,7 @@
 package util;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 public final class Constants {
