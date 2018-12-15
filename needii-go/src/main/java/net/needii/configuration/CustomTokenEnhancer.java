@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.common.util.JsonParserFactory;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
-import net.needii.jpa.entity.security.NeediiUser;
+import net.needii.jpa.entity.security.AuthenticationUser;
 
 public class CustomTokenEnhancer extends JwtAccessTokenConverter {
 	
@@ -27,7 +27,7 @@ public class CustomTokenEnhancer extends JwtAccessTokenConverter {
 	
 	@Override
 	public OAuth2AccessToken enhance(OAuth2AccessToken accessToken, OAuth2Authentication authentication) {
-		NeediiUser user = (NeediiUser) authentication.getPrincipal();
+		AuthenticationUser user = (AuthenticationUser) authentication.getPrincipal();
         DefaultOAuth2AccessToken result = new DefaultOAuth2AccessToken(accessToken);
 		Map<String, Object> info = new LinkedHashMap<String, Object>(accessToken.getAdditionalInformation());
 		String tokenId = result.getValue();
@@ -38,14 +38,7 @@ public class CustomTokenEnhancer extends JwtAccessTokenConverter {
 			tokenId = (String) info.get(TOKEN_ID);
 		}
 		info.put("id", user.getId());
-		info.put("is_supplier", user.isSupplier());
-		info.put("phone", user.getPhone());
 		info.put("email", user.getEmail());
-		info.put("category_ids", user.getCategoryIds());
-		info.put("subscribe_supplier_ids", user.getSubscribeSupplierIds());
-		info.put("like_supplier_ids", user.getLikeSupplierIds());
-		info.put("supplier_ids", user.getSupplierIds());
-		info.put("like_product_ids", user.getLikeProductIds());
 		result.setAdditionalInformation(info);
 		result.setValue(encode(result, authentication));
 		OAuth2RefreshToken refreshToken = result.getRefreshToken();

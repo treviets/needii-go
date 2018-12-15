@@ -14,7 +14,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import net.needii.jpa.entity.BaseUser;
-import net.needii.jpa.entity.security.NeediiUser;
+import net.needii.jpa.entity.security.AuthenticationUser;
 import net.needii.repository.ClientRepository;
 import net.needii.repository.CustomerRepository;
 
@@ -32,17 +32,11 @@ public class NeediiUserDetails implements UserDetailsService {
 	private ClientRepository clientRepository;
 
 	@Override
-	public NeediiUser loadUserByUsername(String s) throws UsernameNotFoundException {
-		NeediiUser userDetails;
+	public AuthenticationUser loadUserByUsername(String s) throws UsernameNotFoundException {
+		AuthenticationUser userDetails;
 		String[] sTemp = s.split(",");
 		BaseUser user = null; 
-		boolean isSupplier = false;
 		List<GrantedAuthority> authorities = new ArrayList<>();
-		List<Integer> categoryIds = new ArrayList<Integer>();
-		List<Long> subscribeSupplierIds = new ArrayList<>();
-		List<Long> likeSupplierIds = new ArrayList<>();
-		List<Long> likeProductIds = new ArrayList<Long>();
-		List<Long> supplierIds = new ArrayList<>();
 		if(sTemp.length < 2) {
 			user = customerRepository.findByPhone(s);
 			authorities.add(new SimpleGrantedAuthority("ROLE_CUSTOMER"));
@@ -55,7 +49,7 @@ public class NeediiUserDetails implements UserDetailsService {
             throw new UsernameNotFoundException(String.format("The user doesn't exist"));
         }
 		
-		userDetails = new NeediiUser(s, user.getPassword(), user.getId(), user.getPhone(), user.getEmail(), categoryIds, subscribeSupplierIds, likeSupplierIds, supplierIds, likeProductIds, isSupplier, authorities);
+		userDetails = new AuthenticationUser(s, user.getPassword(), true, true, true, true, authorities);
 
 		return userDetails;
 	}
