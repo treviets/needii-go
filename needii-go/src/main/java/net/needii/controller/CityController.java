@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
 import net.needii.dto.BaseDto;
 
 /**
@@ -19,7 +20,8 @@ import net.needii.dto.BaseDto;
  *
  */
 @RestController
-@RequestMapping("cities")
+@RequestMapping("api/cities")
+@Api(value = "City Endpoint", description = "The URL to handle city endpoint")
 public class CityController extends BaseController {
 
 	

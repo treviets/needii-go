@@ -28,10 +28,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
     
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
-        .requestMatchers()
-        .and()
-        .authorizeRequests()
-        .antMatchers("/needii-go/swagger-ui/**", " /needii-go/v2/**").permitAll();
+
+        http.authorizeRequests().antMatchers("/api/**" ).hasAnyRole("GUEST", "CUSTOMER", "SUPPLIER");
+        
+        http.requestMatchers().and().authorizeRequests().antMatchers("swagger-ui/**", "v2/**").permitAll();
+        
     }
 }

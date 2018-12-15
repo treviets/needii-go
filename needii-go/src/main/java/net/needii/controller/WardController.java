@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author kelvin
+ * @author Vincent
  *
  */
 @RestController
-@RequestMapping("wards")
+@RequestMapping("api/wards")
 public class WardController extends BaseController {
 	
 }
