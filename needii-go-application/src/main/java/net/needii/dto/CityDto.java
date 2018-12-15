@@ -3,7 +3,7 @@
  */
 package net.needii.dto;
 
-public class CityDto extends BaseModelResponseImpl {
+public class CityDto {
 	
 	private int id;
 	

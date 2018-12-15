@@ -3,12 +3,9 @@
  */
 package net.needii.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.needii.jpa.entity.Ward;
 
-public class WardDto extends BaseModelResponseImpl {
+public class WardDto {
 	
 	private int id;
 	
@@ -22,17 +19,6 @@ public class WardDto extends BaseModelResponseImpl {
 		this.name = entity.getName();
 	}
 	
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<?> mapToListResponse(List<?> baseEntities) {
-		List<Ward> entities = (List<Ward>) baseEntities;
-		
-		List<WardDto> list =  new ArrayList<WardDto>(); 
-		for (Ward entity : entities) {
-			list.add(new WardDto(entity));
-		}
-		return list;
-	}
 
 	public int getId() {
 		return id;

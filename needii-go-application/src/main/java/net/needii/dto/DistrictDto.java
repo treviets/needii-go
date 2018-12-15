@@ -3,12 +3,9 @@
  */
 package net.needii.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.needii.jpa.entity.District;
 
-public class DistrictDto extends BaseModelResponseImpl {
+public class DistrictDto{
 	
 	private int id;
 	
@@ -22,17 +19,6 @@ public class DistrictDto extends BaseModelResponseImpl {
 		this.name = entity.getName();
 	}
 	
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<?> mapToListResponse(List<?> baseEntities) {
-		List<District> entities = (List<District>) baseEntities;
-		
-		List<DistrictDto> list =  new ArrayList<DistrictDto>(); 
-		for (District entity : entities) {
-			list.add(new DistrictDto(entity));
-		}
-		return list;
-	}
 	
 	public int getId() {
 		return id;
